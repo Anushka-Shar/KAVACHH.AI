@@ -1,0 +1,75 @@
+/* KAVACHH-AI theme — kept consistent with src/App.css.
+   Note: this file isn't currently imported anywhere in the app
+   (only App.css is imported from main.jsx), but is restyled here
+   for consistency in case it's wired in later. */
+
+:root {
+  --bg-1: #000000;
+  --bg-2: #0c0f0d;
+  --bg-3: #111815;
+  --panel-bg: #161d1a;
+  --panel-border: #232b27;
+  --text-primary: #ffffff;
+  --text-muted: #c9d1cd;
+  --red: #e2231a;
+  --red-dark: #a5170f;
+  --font-display: 'Chakra Petch', sans-serif;
+  --font-body: 'Inter', Arial, sans-serif;
+}
+
+/* Reset default margin/padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: var(--font-body);
+  background: linear-gradient(160deg, var(--bg-1) 0%, var(--bg-2) 45%, var(--bg-3) 100%);
+  color: var(--text-primary);
+}
+
+/* Navbar styling */
+.site-nav {
+  background: rgba(6, 8, 7, 0.9);
+  color: #fff;
+  padding: 12px 24px;
+  border-bottom: 1px solid var(--panel-border);
+}
+
+.site-nav .nav-links a {
+  color: var(--text-muted);
+  margin: 0 12px;
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-size: 13px;
+}
+
+.site-nav .nav-links a:hover {
+  color: var(--text-primary);
+}
+
+/* Panel styling */
+.panel {
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  padding: 16px;
+  margin: 12px;
+  border-radius: 10px;
+  color: var(--text-muted);
+}
+
+/* Grid layouts */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
